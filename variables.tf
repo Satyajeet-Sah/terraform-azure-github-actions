@@ -1,7 +1,6 @@
-variable "rg_data_name" {
-  type = string
-}
-
-variable "rg_data_location" {
-  type = string
+variable "regions" {
+  type = map(object({
+    location = string
+    vm_count = number
+  }))
 }

@@ -66,3 +66,6 @@ override.tf.json
 # Terraform CLI configuration
 .terraformrc
 terraform.rc
+
+#Github runner azure access credentials
+github-federated-credential.json
