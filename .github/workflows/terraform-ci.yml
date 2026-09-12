@@ -36,15 +36,15 @@ jobs:
               env:
                 TF_VAR_regions: |
                     {
-                        "spain_central": {
+                        "spain-central": {
                         "location": "${{ vars.SPAIN_LOCATION }}",
                         "vm_count": ${{ vars.SPAIN_VM_COUNT }}
                         },
-                        "israel_central": {
+                        "israel-central": {
                         "location": "${{ vars.ISRAEL_LOCATION }}",
                         "vm_count": ${{ vars.ISRAEL_VM_COUNT }}
                         },
-                        "central_india": {
+                        "central-india": {
                         "location": "${{ vars.INDIA_LOCATION }}",
                         "vm_count": ${{ vars.INDIA_VM_COUNT }}
                         }
