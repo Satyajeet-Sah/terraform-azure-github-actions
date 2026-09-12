@@ -36,6 +36,7 @@ jobs:
 
             - name: Terraform Apply
               env:
+                TF_VAR_ssh_public_key: ${{ secrets.AZURE_SSH_PUBLIC_KEY }}
                 TF_VAR_regions: |
                     {
                         "spain-central": {

@@ -4,3 +4,8 @@ variable "regions" {
     vm_count = number
   }))
 }
+
+variable "ssh_public_key" {
+  type      = string
+  sensitive = true
+}
