@@ -16,11 +16,15 @@ jobs:
 
             - name: Terraform Initialization
               run: terraform init
-              
+
             - name: Code Validation
               run: terraform validate
 
             - name: What infrastructure will be created
+              env:
+                TF_VAR_rg_data_name: ${{vars.RG_NAME}}
+                TF_VAR_rg_data_location: ${{vars.RG_LOCATION}}
               run: terraform plan
+
 
              
