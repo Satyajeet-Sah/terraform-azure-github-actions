@@ -1,0 +1,26 @@
+name: Terraform CI
+on:
+    workflow_dispatch:
+jobs:
+    terraform:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            
+            - name: Setup Terraform in temp VM
+              uses: hashicorp/setup-terraform@v3
+
+            - name: Terraform Format check
+              run:  terraform fmt -check -recursive 
+
+            - name: Code Validation
+              run: terraform validate
+
+            - name: Terraform Initialization
+              run: terraform init
+
+            - name: What infrastructure will be created
+              run: terraform plan
+
+             
